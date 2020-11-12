@@ -1,6 +1,6 @@
 module RayTraceEllipsoid
 
-using CoordinateTransformations, StaticArrays, UnitfulAngles
+using CoordinateTransformations, StaticArrays, Unitful
 import LinearAlgebra: normalize, ⋅
 
 export Vec, Ray, Ellipsoid, Interface, OpticUnit, raytrace!, advance!, bend!
@@ -137,7 +137,7 @@ Convenience function to build optical units. Build an optical unit depending on 
 """
 function OpticUnit(body::Ellipsoid, pointin::Bool, n::Float64, register::Bool, name::String)
     i = ifelse(pointin, -1.0, 1.0)
-    dir = LinearMap(SDiagonal{3, Float64}(i, i, i))
+    dir = LinearMap(SDiagonal{3, Float64}([i, i, i]))
     normal = dir∘body.scale∘body.scale∘body.center
     interface = Interface(normal, n)
     return OpticUnit(body, interface, register, name)

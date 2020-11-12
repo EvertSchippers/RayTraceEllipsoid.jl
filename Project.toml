@@ -1,0 +1,13 @@
+name = "RayTraceEllipsoid"
+uuid = "0107fe6f-c9e3-4c09-ae95-11515e33a652"
+authors = ["Yakir <12.yakir@gmail.com> and contributors"]
+version = "2.0.0"
+
+[deps]
+CoordinateTransformations = "150eb455-5306-5404-9cee-2592286d6298"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+OffsetArrays = "6fe1bfb0-de20-5000-8ca7-80f57d26f881"
+Rotations = "6038ab10-8711-5258-84ad-4b1120ba62dc"
+StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
+Unitful = "1986cc42-f94f-5a68-af5c-568840ba703d"
+UnitfulAngles = "6fb2a4bd-7999-5318-a3b2-8ad61056cd98"
